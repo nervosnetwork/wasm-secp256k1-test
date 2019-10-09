@@ -1,12 +1,9 @@
 use faster_hex::hex_decode_fallback;
 use secp256k1::{PublicKey, Signature, Message, verify};
 use tiny_keccak::sha3_256;
+use wasm_bindgen::prelude::*;
 
-fn main() {
-    run(0);
-}
-
-#[no_mangle]
+#[wasm_bindgen]
 pub fn run(i: u8) -> u8 {
     let pubkey = "033f8cf9c4d51a33206a6c1c6b27d2cc5129daa19dbd1fc148d395284f6b26411f";
     let signature = "304402203679d909f43f073c7c1dcf8468a485090589079ee834e6eed92fea9b09b06a2402201e46f1075afa18f306715e7db87493e7b7e779569aa13c64ab3d09980b3560a3";
