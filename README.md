@@ -5,9 +5,9 @@ This is test showing that we can compile WASM code to RISC-V directly, and run t
 # How to use this:
 
 ```bash
-$ git clone https://github.com/WebAssembly/wabt
+$ git clone --recursive https://github.com/WebAssembly/wabt
 $ cd wabt
-# export WABT_PATH=`pwd`
+$ export WABT_PATH=`pwd`
 $ mkdir build
 $ cd build
 $ cmake ..
@@ -29,6 +29,8 @@ Now you will have a secp_riscv64 binary to play with in CKB VM. One way to run i
 ```bash
 $ git clone https://github.com/nervosnetwork/ckb-vm-test-suite
 $ git submodule update --init --recursive
+$ cd ckb-vm-test-suite
+$ git clone https://github.com/nervosnetwork/ckb-vm
 $ cd binary
 $ cargo build --release
 $ ./target/release/asm64 ../../wasm-secp256k1-test/secp_riscv64 1
