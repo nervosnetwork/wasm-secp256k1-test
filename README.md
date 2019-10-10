@@ -28,8 +28,8 @@ Now you will have a secp_riscv64 binary to play with in CKB VM. One way to run i
 
 ```bash
 $ git clone https://github.com/nervosnetwork/ckb-vm-test-suite
-$ git submodule update --init --recursive
 $ cd ckb-vm-test-suite
+$ git submodule update --init --recursive
 $ git clone https://github.com/nervosnetwork/ckb-vm
 $ cd binary
 $ cargo build --release
